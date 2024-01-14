@@ -80,66 +80,10 @@ const BusMains = () => {
       setHide(hide - 1);
     }
 
-    // if (seatAfetrSelected < choosenButton) {
-    //   newSeat = bookTicket.map((obj, idx) => {
-    //     idx >= index && idx <= choosenButton + (index - 1)
-    //       ? (obj.selected = true)
-    //       : obj.selected;
-    //     return obj;
-    //   });
-    // } else {
-    //   newSeat = bookTicket.map((obj, idx) => {
-    //     idx >= index && idx <= choosenButton + (index - 1)
-    //       ? (obj.selected = true)
-    //       : obj.selected;
-    //     return obj;
-    //   });
-    // }
     setBookTicket([...bookTicket]);
     let total = ticketPrice;
     total = bookTicket[index].selected ? ticketPrice + 100 : ticketPrice - 100;
     setTicketPrice(total);
-
-    // let findSeat = bookTicket.filter(obj => obj.index == obj.selected);
-    // if (!bookTicket[index].selected) {
-    //   let count = 0;
-    //   for (let i = item.id; i < bookTicket.length; i++) {
-    //     if (!bookTicket[i].selected && count <= choosenButton) {
-    //       bookTicket[i].selected = true;
-    //       count++;
-    //     }
-    //   }
-    //   if (count < choosenButton) {
-    //     for (let i = 0; i < index; i++) {
-    //       if (!bookTicket[i].selected && count <= choosenButton) {
-    //         bookTicket[i].selected = true;
-    //         count++;
-    //       }
-    //     }
-    //   }
-    // }
-
-    // console.log('index', findSeat);
-    // const newSeat = bookTicket.map((obj, idx) => {
-    //   idx >= index && idx <= choosenButton + (index - 1)
-    //     ? (obj.selected = true)
-    //     : obj.selected;
-    //   // if (idx >= index && idx <= choosenButton + (index - 1)) {
-    //   //   obj.selected = true;
-    //   //   console.log('index', idx);
-    //   // }
-    //   // else if (obj.selected == true) {
-    //   //   index + 1;
-    //   // }
-
-    //   // }
-
-    //   // obj.selected == true
-    //   //   ? idx + 1 < choosenButton
-    //   //   : (obj.selected = true);
-
-    //   return obj;
-    // });
   };
 
   return (
